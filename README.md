@@ -4,11 +4,11 @@ A local-first experimental Python desktop research companion for Windows, featur
 
 > **Prototype status:** This is source code, **not** a precompiled Windows installer or a proven fully autonomous agent. Local model weights and compatible llama.cpp binaries must be downloaded separately. Test screen, browser, Word, mouse and keyboard features on your actual Windows PC before relying on them.
 
-![AI-generated desktop companion concept illustration](assets/companion_concept.webp)
+![AI-generated architecture illustration of the Personal Learning Agent](assets/architecture.svg)
 
-*Concept illustration; the actual Tkinter interface differs.*
+*AI-generated conceptual architecture diagram; it is not a screenshot of the actual application.*
 
-## Start on Windows
+**Publication status:** The GitHub repository currently contains the project description, community/support files and architecture figure. The complete v6 application source has not yet been uploaded here. The release ZIP shared in the ChatGPT conversation includes a Windows Git publishing helper; once it is run, the missing `pla/`, `tests/`, `docs/`, and installation files will appear here. Until then, **Code → Download ZIP is not a runnable application**.\n\n## Start on Windows
 
 1. Install Python 3.11 or newer with Tkinter enabled.
 2. Clone the repository or choose **Code → Download ZIP**.
