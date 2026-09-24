@@ -1,15 +1,29 @@
-# Contributing
+# Contributing to Personal Learning Agent
 
-Thank you for helping improve Personal Learning Agent. Report bugs and propose changes using GitHub issues and pull requests.
+Thank you for helping shape a personal AI assistant that respects the user's data and keeps desktop actions reviewable.
 
-## Workflow
+**Current public contribution scope:** This repository publishes project and community materials, but not the private Windows application source or a release installer. You can contribute issues, Windows test plans, accessible UI designs, examples of safe workflows, translations, and documentation improvements. Direct application-code contributions require a separate agreement and source access.
 
-1. Describe the intended change and its security or privacy implications.
-2. Keep changes limited to one feature or bug fix, with reproducible testing steps.
-3. Run `python -m unittest discover -s tests -p "test_*.py"` before submitting.
-4. State which behavior was tested on real Windows hardware and which was only tested with offline mocks.
-5. Do **not** commit credentials, local memory databases, model weights, screenshots, logs, browser histories, datasets, or other personal files.
+## Start here
 
-Desktop observation, file operations and replayed mouse/keyboard actions must have clear user controls, reviewable outcomes and a reliable stop mechanism. No stealth recording, credential harvesting, hidden exfiltration, or unrestricted auto-execution of generated code.
+1. Read the [project overview](PROJECT_OVERVIEW.md) and [README](README.md), especially the prototype limitations.
+2. Search [existing issues](https://github.com/10GODS/PersonalLearningAgent-Windows/issues) for similar ideas.
+3. For a bug report, include your Windows version, CPU/GPU, RAM, relevant application version, exact reproduction steps, expected and actual outcomes, and **redacted** logs.
+4. For a new feature, describe the user problem, a concrete workflow, how to verify success, and any privacy or safety implications.
+5. If you propose documentation changes, keep them aligned with what is actually public and tested.
 
-**Licensing:** A repository-level open-source license has not been selected yet. Discuss contribution rights with the maintainer before submitting substantial code. Third-party libraries and model weights have separate licenses.
+**Never upload** credentials, unredacted screen captures, personal memory databases, research datasets, browser history, API tokens, model weights, private files, or another person's data. Do not propose hidden observation, credential capture, unrestricted auto-execution, or bypassing user consent.
+
+## Contribution ideas
+
+- Hardware test matrix for CPU-only Windows 10/11 and compatible Intel/AMD/NVIDIA graphics.
+- Text-only setup guide for beginners and error-reporting checklist.
+- Companion interface mockups with visible pause, stop, approval, and history controls.
+- Examples of safe file-management previews and undo behavior.
+- Reproducible experiment-memory cases with fictional data.
+
+## Licensing and code submissions
+
+A repository-level software license has not been selected and the private application source is not currently published here. Publishing a suggestion does not transfer ownership of your original work. Discuss licensing and expectations with the maintainer before sending substantial code, third-party assets, or proprietary documents. Third-party models and dependencies have their own terms.
+
+See [support information](SPONSORS.md) if you want to help fund testing and documentation instead.
