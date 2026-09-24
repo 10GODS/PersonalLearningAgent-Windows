@@ -1,45 +1,59 @@
-# Personal Learning Agent — Windows v6
+# Personal Learning Agent — Local-First AI Desktop Companion for Windows
 
-A local-first experimental Python desktop research companion for Windows, featuring a floating assistant, optional whole-PC **user-data** discovery, a local AI model manager, browser and Word helpers, approval-based Teach + Replay workflows, automatically drafted skills, and an experiment journal.
+**An experimental personal AI assistant for Windows that brings local language models, research memory, file organization, workflow learning, and a floating desktop companion together.**
 
-> **Prototype status:** This is source code, **not** a precompiled Windows installer or a proven fully autonomous agent. Local model weights and compatible llama.cpp binaries must be downloaded separately. Test screen, browser, Word, mouse and keyboard features on your actual Windows PC before relying on them.
+[Report a bug](https://github.com/10GODS/PersonalLearningAgent-Windows/issues/new) · [Suggest a feature](https://github.com/10GODS/PersonalLearningAgent-Windows/issues/new) · [Contribute](CONTRIBUTING.md) · [Support development](SPONSORS.md)
 
-![AI-generated architecture illustration of the Personal Learning Agent](assets/architecture.svg)
+![Concept illustration of the Personal Learning Agent architecture](assets/architecture.svg)
 
-*AI-generated conceptual architecture diagram; it is not a screenshot of the actual application.*
+> **Development status:** Experimental Windows prototype. The repository currently publishes project documentation and community materials, **not the application source code or an installable Windows release**. The existing Python prototype and local model downloads are not hosted here. Features below describe the project's prototype scope or development goals; functionality, reliability, and CPU/GPU performance have **not been independently validated on all Windows hardware**. The illustration is conceptual, not an application screenshot.
 
-**Publication status:** The GitHub repository currently contains the project description, community/support files and architecture figure. The complete v6 application source has not yet been uploaded here. The release ZIP shared in the ChatGPT conversation includes a Windows Git publishing helper; once it is run, the missing `pla/`, `tests/`, `docs/`, and installation files will appear here. Until then, **Code → Download ZIP is not a runnable application**.\n\n## Start on Windows
+## Why build a personal learning agent?
 
-1. Install Python 3.11 or newer with Tkinter enabled.
-2. Clone the repository or choose **Code → Download ZIP**.
-3. Run `install.bat` to install Python dependencies, then `launch.bat` to start the companion.
-4. Configure and download a supported local model in **Models + Hardware**. Ollama is not required.
-5. Enable file indexing or screen learning only after reviewing the permissions. Test Teach + Replay in a harmless app such as Notepad.
+Most chatbots respond to one conversation at a time. Personal Learning Agent explores a different workflow: helping a person organize their own local work, retrieve relevant project history, review changes, and turn repeated tasks into reusable skills. The aim is an assistant that becomes more context-aware through *reviewable memory and feedback*, rather than silently retraining model weights or recording everything a user does.
 
-Details: [Getting started](START_HERE.txt) · [Full guide](docs/README.md) · [Adaptive hardware](docs/ADAPTIVE_HARDWARE_v4.md) · [Desktop tasks](docs/DESKTOP_TASKS_v3.md) · [Teach + Replay](docs/TEACH_AND_REPLAY_v5.md) · [Skills and experiments](docs/SKILLS_AND_EXPERIMENTS_v6.md).
+This project is especially interested in workflows involving **research papers, GIS and remote sensing, Python experiments, document preparation, and everyday Windows file management**.
 
-## What this experimental release includes
+## Project capabilities and planned improvements
 
-| Component | Current scope |
+| Area | Prototype scope or development goal |
 | --- | --- |
-| Floating companion | Tkinter desktop mascot and chat controls |
-| Local AI | Download/cache of quantized model weights, CPU fallback, optional GPU backends |
-| Learning | Local SQLite memory and optional indexing of accessible user data |
-| Work tools | Browser bridge, Word inspection, file organization previews, web and academic search |
-| Desktop actions | Recorded, explicitly approved mouse/keyboard macro replay; coordinate-based and layout-sensitive |
-| Skills | Automatically generated *draft* skills from indexed files; approval needed before execution |
-| Experiments | Local experiment records and suggestions; generated metrics are not automatically verified |
+| Local AI | Quantized GGUF models through a separately installed llama.cpp runtime; CPU operation and optional compatible GPU backends |
+| Persistent memory | Save project context, indexed documents, task feedback, and experiment notes on the user's computer |
+| Floating desktop companion | A small assistant with chat and notification surfaces, with selectable visual styles |
+| File intelligence | Index eligible user files; propose organization changes and preview potentially disruptive operations |
+| Research assistance | Use local documents and optional web/academic search to prepare grounded suggestions |
+| Skills and experiments | Draft reusable workflow descriptions, record experiments, and track previous outcomes |
+| Desktop automation | User-approved Teach + Replay workflows; **not** unrestricted autonomous control |
+| Privacy controls | Reviewable observation scope, permission controls, and local storage by default |
 
-### Testing
+**Important limitations:** A file scan is not full comprehension of every file. Screen learning is event-based and permission-limited, not nonstop recording of all applications. Generated suggestions can be wrong. Automatic desktop actions need verification, backups, and user approval. Downloaded third-party models and inference engines have their own terms and hardware requirements.
 
-Run `python -m unittest discover -s tests -p "test_*.py"`. The repository contains a Windows EXE *build script*, not a precompiled installer.
+## Get involved — no coding required
 
-## Privacy and safety
+You can help test and shape the project even though the private development source is not currently published.
 
-Do not commit AI model weights, private memory databases, screenshots, browser history, credentials, logs, local settings, sensitive documents, or datasets. Whole-PC discovery excludes protected system and credential areas by design; review the actual scope and your permissions. Desktop macros can click the wrong target after windows or layouts change. Web research requires connectivity; not all features work offline.
+- **Windows beta testers:** Open an issue with your Windows version, CPU/GPU, RAM, the step that failed, expected behavior, and a redacted error report. Never upload private screenshots, passwords, browser histories, or research data.
+- **Researchers and students:** Describe a real document, experiment, citation, GIS, or notebook workflow where a personal agent could save time.
+- **Designers and accessibility contributors:** Suggest companion styles, keyboard navigation, screen-reader behavior, and clear safety/permission prompts.
+- **Developers:** Propose features or request collaboration through an issue. Direct code contributions need a separately shared, appropriately licensed source tree.
 
-## Community
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidance. Small, clearly scoped issues are welcome.
 
-[Contribution guidelines](CONTRIBUTING.md) · [Contributors](CONTRIBUTORS.md) · [Support / sponsorship](SPONSORS.md).
+## Follow development and help the project grow
 
-**License:** A repository-level open-source license has not yet been selected. Public source availability does not automatically permit copying, redistribution, modification, or commercial use. Third-party software, AI model weights and assets have their own terms.
+If this is relevant to you, **Star** the repository, **Watch** it for updates, share it with someone working on local AI or Windows automation, and describe the feature you would most like to test in an issue. Honest feedback and reproducible bug reports are more valuable than automated stars or promotional spam.
+
+See [Project overview and roadmap](PROJECT_OVERVIEW.md) for use cases, planned work, and frequently asked questions.
+
+## Support development
+
+Maintaining a local-first Windows agent means testing different CPUs, Intel/NVIDIA/AMD graphics, accessibility, document formats, and privacy protections. Voluntary support can help fund that work. See [SPONSORS.md](SPONSORS.md) for ways to support development; **payments are not enabled merely by listing a sponsorship link**.
+
+[Learn about GitHub Sponsors](https://github.com/sponsors) · [GitHub Sponsors profile, if activated](https://github.com/sponsors/10GODS)
+
+## Privacy, licensing, and distribution
+
+This repository intentionally does **not** contain personal memories, screenshots, credentials, AI model weights, downloaded inference binaries, or the private development source. Never attach these materials to public issues.
+
+**Source availability:** The source code is not currently distributed through this public repository. A public repository is not automatically open-source software; no repository-level software license has been announced. We welcome feedback, documentation suggestions, design ideas, and collaboration discussions without implying permission to modify or redistribute unpublished code. Third-party packages and models retain their respective licenses.
